@@ -93,6 +93,8 @@ STICKERS = (
       "CAACAgUAAx0CTpRfGwACF41hMfagTfWdHNFici1VtOCQVVNYmgACgh8AAsZRxhU6tKJa_ySnnCAE",
       "CAACAgUAAx0CTpRfGwACF5phMfi5vgKwQFg6KuzHiEc79QFT0QACCR4AAsZRxhVu32VqEb3_1SAE",
       "CAACAgUAAx0CTpRfGwACGIBhQcGJDHuuXsU5el3I86SEx3nTpgAC2R8AAsZRxhUpEe6EcVukQCAE",
+      "CAACAgUAAx0CXss_8QABAfL_YYviVTY5DJlA163cD7M5CXtqTUAAApcEAAJsG2BU6tUpTQaICT0iBA",
+      "CAACAgUAAx0CXss_8QABAfMMYYvikwJELjI1NEpK-ZcNEs6iBxoAAq8FAAJTGVhU88p0aZIDS_EiBA",
 )    
 
 buttons = [
@@ -240,9 +242,9 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
                 
             else:
-            update.effective_message.reply_sticker(
-                random.choice(STICKERS),
-                timeout=60,
+                 update.effective_message.reply_sticker(
+                   random.choice(STICKERS),
+                    timeout=60,
             )
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
